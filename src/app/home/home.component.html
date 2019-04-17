@@ -1,0 +1,39 @@
+<p>
+  {{homeTitle}}         <!-- adds the content of homeTitle from .ts file -->
+</p>
+
+<!--<ng-content></ng-content>     to add the content we added in the root html page with the app-home tags-->
+
+<!-- 2-way data binding -->
+<!-- <input [(ngModel)] = "addQuestion.question" /> -->
+
+
+<br>
+<label> Question: </label>
+  <input [value]="question" />
+<br>
+<label> Option1: </label>
+  <input [value]="option1" />
+<label> Option2: </label>
+  <input [value]="option2" />
+<br>
+<label> Option3: </label>
+  <input [value]="option3" />
+<label> Option4: </label>
+  <input [value]="option4" />
+
+<button (click) = "alertMe('Question saved')">Save</button>
+
+<p>{{addQuestion.question}}</p><p>{{addQuestion.option1}}</p><p>{{addQuestion.option2}}</p><p>{{addQuestion.option3}}</p><p>{{addQuestion.option4}}</p><p>{{addQuestion.answer}}</p>
+
+
+<!--property binding-->
+
+<!--  -----------------------
+<input [value]="myString" />
+<input [required]="myBoolean"/>
+
+<!-- Or it can be dine like ----
+<input value="{{myString}}" />
+<input required="{{myBoolean}}"/>
+---------------------------- -->
